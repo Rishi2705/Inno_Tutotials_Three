@@ -1,5 +1,6 @@
 package com.example.innotutotialsthree
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -19,6 +20,7 @@ class MainActivity4 : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val btn = findViewById<Button>(R.id.btn)
         val rg = findViewById<RadioGroup>(R.id.rg)
+        val ebtn = findViewById<Button>(R.id.emailbtn)
         btn.setOnClickListener{
             val rd1 = rg.checkedRadioButtonId
             val rb1 = findViewById<RadioButton>(rd1)
@@ -40,6 +42,9 @@ class MainActivity4 : AppCompatActivity() {
             }
             tv3.text = opt_txt
 
+        }
+        ebtn.setOnClickListener {
+            startActivity(Intent(this,MainActivity6::class.java))
         }
 
     }
